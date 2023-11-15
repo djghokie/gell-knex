@@ -1,0 +1,25 @@
+{
+  "name": "gell-knex",
+  "version": "0.0.1",
+  "description": "gell based approach to working with knex",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "keywords": [
+    "gell",
+    "knex"
+  ],
+  "author": "Daniel Gay",
+  "license": "ISC",
+  "dependencies": {
+    "gell": "^1.17.0",
+    "knex": "^3.0.1"
+  },
+  "devDependencies": {
+    "chance": "^1.1.11",
+    "gell-dependency": "^0.0.4",
+    "gell-runtime": "^0.5.3",
+    "pg": "^8.11.3"
+  }
+}
