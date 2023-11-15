@@ -34,6 +34,7 @@ module.exports = class Store {
 	
 	lookup(table, key) {
 		assert(_.isString(table), 'table name is required');
+		assert(_.isObject(key), 'item key is required');
 
 		return this.$lookup.next({ table, key }).value;
 	}
