@@ -41,7 +41,7 @@ class Store extends State {
 		// [this.$queries] = init(queries(this.namedQueries, this.saved));
 	}
 
-	async save(table, item) {
+	async insert(table, item) {
 		assert(_.isString(table), 'table name is required');
 		assert(item);
 

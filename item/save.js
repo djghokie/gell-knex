@@ -23,7 +23,7 @@ module.exports = function* save(deps, options={}) {
 	
 		const { actor } = options;
 
-		const [saved] = await knex('users')
+		const [saved] = await knex(table)
 			.insert(item.snapshot ? item.snapshot(actor) : item)
 			.returning('*')
 			;

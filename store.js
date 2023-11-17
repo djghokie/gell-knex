@@ -25,7 +25,7 @@ module.exports = class Store {
 		this.knex = deps.resolveSingle('knex');
 	}
 
-	save(table, item) {
+	insert(table, item) {
 		assert(_.isString(table), 'table name is required');
 		assert(item);
 

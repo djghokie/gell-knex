@@ -19,13 +19,13 @@ describe('store', function() {
 		}
 	})
 
-	describe('save', function() {
+	describe('insert', function() {
 		it('returns saved item', async function() {
 			const user = {
 				name: 'Dan'
 			}
 
-			const saved = await store.save('users', user);
+			const saved = await store.insert('users', user);
 
 			assert(saved);
 			assert.strictEqual(saved.name, 'Dan');
@@ -36,7 +36,7 @@ describe('store', function() {
 		let user;
 
 		beforeEach(async function() {
-			user = await store.save('users', {
+			user = await store.insert('users', {
 				name: chance.name()
 			});
 		})

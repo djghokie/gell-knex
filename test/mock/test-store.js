@@ -12,21 +12,21 @@ describe('mock store', function() {
 		}
 	})
 
-	describe('save', function() {
+	describe('insert', function() {
 		it('stores item as lastSaved', async function() {
-			await store.save('users', {});
+			await store.insert('users', {});
 
 			assert(store.lastSaved);
 		})
 
 		it('returns item', async function() {
-			const user = await store.save('users', {});
+			const user = await store.insert('users', {});
 
 			assert(user);
 		})
 
 		it('generates id', async function() {
-			const user = await store.save('users', {});
+			const user = await store.insert('users', {});
 
 			assert(user.id);
 		})
@@ -36,7 +36,7 @@ describe('mock store', function() {
 		let user;
 
 		beforeEach(async function() {
-			user = await store.save('users', { });
+			user = await store.insert('users', { });
 		})
 
 		it('returns previously saved item', async function() {
@@ -48,7 +48,7 @@ describe('mock store', function() {
 
 	describe('list', function() {
 		beforeEach(async function() {
-			await store.save('users', {});
+			await store.insert('users', {});
 		})
 
 		it('works', async function() {

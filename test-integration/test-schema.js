@@ -12,7 +12,7 @@ const knex = require('knex')({
 	}
 });
 
-describe.skip('schema builder', function() {
+describe('schema builder', function() {
 	beforeEach(function() {
 		
 	})

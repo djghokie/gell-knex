@@ -26,8 +26,9 @@ module.exports = function* lookup(deps, options={}) {
 		assert(_.isString(table), 'table name is required');
 		assert(_.isObject(key), 'key is required');
 
-		const [item$] = await knex(table)
+		const item$ = await knex(table)
 			.where(key)
+			.first()
 			;
 
 		if (_.isUndefined(item$)) return item$;
