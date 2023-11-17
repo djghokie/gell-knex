@@ -1,6 +1,6 @@
 {
   "name": "gell-knex",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "gell based approach to working with knex",
   "main": "index.js",
   "scripts": {
